@@ -1,0 +1,64 @@
+# Day 1 – Basic Linux Commands
+
+  # Working folder: ~/dia1_practica
+
+---
+
+## 📂 File navigation
+
+- `pwd` → Shows the current directory  
+  Output: /home/user/dia1_practica
+
+- `ls` → Lists files in the folder  
+- `ls -la` → Lists all files including hidden ones, with detailed permissions
+
+---
+
+## 📝 File management
+
+- `mkdir dia1_practica` → Creates a new folder  
+- `cd dia1_practica` → Enters the folder  
+- `touch archivo1.txt` → Creates an empty file  
+- `nano archivo1.txt` → Opens the file in terminal text editor  
+- `cat archivo1.txt` → Displays file content
+
+Contents of `archivo1.txt`:
+This is my first file in Linux
+r
+
+---
+
+## 🔐 Users and permissions
+
+- `whoami` → Displays current user  
+  Output: kali
+
+- `id` → Shows UID, GID and groups  
+- `groups` → Shows which groups the user belongs to
+
+- `chmod 600 archivo1.txt` → Grants read/write permissions only to the owner (rw-------)  
+- `chmod 755 archivo2.txt` → Full permissions for the owner, read/execute for others (rwxr-xr-x)
+
+- `ls -l` → View file permissions:
+-rw------- 1 kali kali 25 May 21 archivo1.txt
+-rwxr-xr-x 1 kali kali 20 May 21 archivo2.txt
+
+
+---
+
+## 🌐 Network commands
+
+- `ip a` → Displays network interfaces and IP addresses  
+- `ifconfig` → Also shows IPs (requires net-tools)
+
+---
+
+## ✅ Conclusion
+
+Today I learned:
+- How to navigate in Linux using basic commands  
+- How to create and manage files and directories  
+- How to change file permissions  
+- How to view my IP address and network interfaces in Kali
+
+This file is part of my personal documentation while learning offensive cybersecurity from scratch.
