@@ -1,0 +1,5 @@
+echo - sirve para escribir dentro de un archivo
+puedes ver lo que hay dentro de un archivo si lo ejecutas y el comando para ejecutarlo es
+.plublico.sh 
+cd es para navegar y entrar adentro de una carpeta 
+
