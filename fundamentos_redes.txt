@@ -1,0 +1,49 @@
+#dia 3 
+ip a > muestra interfaces 
+ip route > rutas
+
+
+
+##conectividad
+
+. ping 8.8.8.8 > lo activa
+. traceroute > camino de paquetes 
+
+
+### servicios 
+
+- netstat -tuln > puertos abiertos en los que puedes identificar servicios que esten escuchando (listening) 
+en tu maquina dentro de ese comendo te puede arrogar datos como el tipo de protocolo cantidad de datos 
+ en cola direccion ip  
+- ss -tuln > conexiones activas 
+
+
+### # netstat -tulnp analysis
+
+Found a Python process (PID 1884) listening on:
+
+- UDP port 47487 on 0.0.0.0 (all IPv4)
+- UDP port 3702 on:
+  - 10.0.2.15 (local IP)
+  - 239.255.255.250 (IPv4 multicast)
+  - IPv6 local and multicast addresses
+
+Purpose: likely a local discovery or network service via WS-Discovery / SSDP.
+
+
+# Eliminando procesos innecesarios
+
+Identifiqué un proceso wsdd en mi Kali Linux que anunciaba servicios en red local por UDP.
+Detecté un servicio activo llamado wsdd escuchando en puertos
+ UDP (ej. 3702), identificado con PID 1884. Entendí que se
+ trata de un servicio de descubrimiento en red utilizado
+ para compartir archivos en entornos Windows/Linux. No representa
+ riesgo en mi entorno local, por lo tanto no fue detenido."
+
+
+Comando para detenerlo:
+sudo kill 1884
+
+Desactivado permanentemente con:
+sudo systemctl disable wsdd
+
